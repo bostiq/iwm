@@ -1,0 +1,53 @@
+// sass-lint:disable no-css-comments
+// sass-lint:disable border-zero
+// sass-lint:disable class-name-format
+// sass-lint:disable property-sort-order
+// sass-lint:disable no-ids
+// sass-lint:disable force-element-nesting
+@use 'colors'
+@import 'colors'
+
+/*
+ *Theme Name:  Inde[x] Web Media a Divi Child
+ *Theme URI:   http://index-stage.indexwebmedia.com
+ *Version:     2.0
+ *Description: A child theme of Divi. This is a custom child theme created for our site inde[x] Web Media.
+ *Author:      Lorenzo Colen info@indexwebmedia.com
+ *Author URI:  http://index-stage.indexwebmedia.com
+ *Template:    Divi
+ */
+
+/* - Add any CSS custom code for this child theme below this line - */
+
+.x-cross
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: $trans
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTE2IDI2NzIuNyI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9Ijc3Ny45MjciIHkxPSIyOTY5LjQiIHgyPSI0MTcyLjI1NiIgeTI9Ii00MjQuOTI3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNDExNnYyNjcyLjdIMHoiLz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOTMxLjU4OSIgeTE9IjU2Mi45MTciIHgyPSI0MzI1LjkxNyIgeTI9IjM5NTcuMjQ1IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIG9wYWNpdHk9Ii44IiBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDQxMTZ2MjY3Mi43SDB6Ii8+PC9zdmc+')
+    background-position: top right
+    background-size: cover
+    opacity: .3
+
+  &.x-flip
+    &::before
+      transform: rotate(180deg)
+
+  &.x-opacity1
+    &::before
+      opacity: .1
+
+.logo_container
+  width: 100% !important
+
+.lorenzo .et_pb_image_wrap
+  width: 40%
+  border-radius: 50%
+  overflow: hidden
+
+  img
+    transform: scale(1.3)
