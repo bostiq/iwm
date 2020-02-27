@@ -4,8 +4,6 @@
 // sass-lint:disable property-sort-order
 // sass-lint:disable no-ids
 // sass-lint:disable force-element-nesting
-@use 'colors'
-@import 'colors'
 
 /*
  *Theme Name:  Inde[x] Web Media a Divi Child
@@ -17,7 +15,17 @@
  *Template:    Divi
  */
 
-/* - Add any CSS custom code for this child theme below this line - */
+@use 'colors'
+@import 'colors'
+
+/**                       
+    ╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗
+    ╠═╣║╣ ╠═╣ ║║║╣ ╠╦╝
+    ╩ ╩╚═╝╩ ╩═╩╝╚═╝╩╚═
+ **/
+
+.logo_container
+  width: 100% !important
 
 .x-company-name
   font-family: 'Roboto Slab', Rockwell, serif
@@ -29,6 +37,11 @@
   // text-transform: uppercase
   // text-shadow: 0 3px 0 #aaa
 
+/**
+  ╔╗ ╔═╗╔═╗╦╔═╔═╗╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
+  ╠╩╗╠═╣║  ╠╩╗║ ╦╠╦╝║ ║║ ║║║║ ║║  ║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
+  ╚═╝╩ ╩╚═╝╩ ╩╚═╝╩╚═╚═╝╚═╝╝╚╝═╩╝  ╚═╝╚═╝╩ ╩╩  ╚═╝╝╚╝╚═╝╝╚╝ ╩ ╚═╝
+ **/
 
 .x-cross
   &::before
@@ -52,8 +65,11 @@
     &::before
       opacity: .1
 
-.logo_container
-  width: 100% !important
+/**
+  ╔╗ ╦  ╦ ╦╦═╗╔╗   ╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╦╔╦╗╔═╗╔═╗╔═╗╔═╗
+  ╠╩╗║  ║ ║╠╦╝╠╩╗  ╠╦╝║ ║║ ║║║║ ║║  ║║║║╠═╣║ ╦║╣ ╚═╗
+  ╚═╝╩═╝╚═╝╩╚═╚═╝  ╩╚═╚═╝╚═╝╝╚╝═╩╝  ╩╩ ╩╩ ╩╚═╝╚═╝╚═╝
+ **/
 
 .lorenzo .et_pb_image_wrap
   width: 40%
