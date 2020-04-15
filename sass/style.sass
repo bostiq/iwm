@@ -4,6 +4,7 @@
 // sass-lint:disable property-sort-order
 // sass-lint:disable no-ids
 // sass-lint:disable force-element-nesting
+// sass-lint:disable force-pseudo-nesting
 
 /*
  *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -78,6 +79,34 @@
   li
     font-weight: 400
 
+@media all and ( max-width: 980px )
+  .container.clearfix.et_menu_container
+    display: flex
+    flex-wrap: wrap
+    align-content: last baseline
+    justify-content: space-between
+    width: 96%
+    align-items: center
+    align-self: auto
+
+  .et_menu_container.clearfix
+    &::after
+      content: none
+
+  .x-company-name
+    font-size: 5vw
+
+  .et_vertical_nav.et_header_style_left .logo_container
+    height: 80px
+    position: relative
+    width: 96px !important
+    margin: 1% 1% 1% 0
+
+  .et_header_style_left #et-top-navigation
+    transform: translateY(16%)
+
+// @media all and(max-width: 479px )
+
 /**
   ╔╗ ╔═╗╔═╗╦╔═╔═╗╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
   ╠╩╗╠═╣║  ╠╩╗║ ╦╠╦╝║ ║║ ║║║║ ║║  ║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
@@ -140,3 +169,61 @@
       display: inline-block
       margin: 0 2% 2% 0
 
+/**                  
+  ╔═╗╔═╗╔═╗╔═╗╔═╗
+  ╠═╝╠═╣║ ╦║╣ ╚═╗
+  ╩  ╩ ╩╚═╝╚═╝╚═╝
+ **/
+
+/** 
+ -------------
+     HOME
+ -------------
+ **/
+
+.et_parallax_bg
+  background-position: -700px 0
+
+/** 
+ -------------
+     ABOUT
+ -------------
+ **/
+
+.x-h4
+  h4
+    padding: 3vw 0 1vw
+
+/** 
+ ----------------------
+     CUSTOM COLUMNS
+ ----------------------
+ **/
+
+@media all and (max-width: 980px)
+
+
+  /*** wrap row in a flex box ***/
+  .x-custom-order-wrap .et_pb_row
+    display: flex
+    flex-wrap: wrap
+
+  /*** custom classes that will designate the order of columns in the flex box row ***/
+  .x-first-col
+    order: 1
+
+  .x-second-col
+    order: 2
+
+  .x-third-col
+    order: 3
+
+  .x-fourth-col
+    order: 4
+
+  /*** add margin to last column ***/
+  .x-custom-order-wrap:last-child
+    .et_pb_column:last-child
+      margin-bottom: 30px
+
+ 

@@ -247,7 +247,9 @@
 						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
 					</a>
 				</div>
-				<h1 class="x-company-name title x-side-header">inde[x]<br>Web<br>Media</h1>
+        <div class="x-title-container">
+				  <h1 class="x-company-name title x-side-header">inde[x] Web Media</h1>
+        </div>
 			<?php
 				$logo_container = ob_get_clean();
 
