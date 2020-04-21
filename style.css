@@ -36,6 +36,19 @@
  * *Author URI:  http://index-stage.indexwebmedia.com
  * *Template:    Divi
  * */
+/* =====================
+ * - 
+ *    TEMPLATE RESETS
+ * -
+ * =====================
+ * */
+.single .post {
+  padding-bottom: 0;
+}
+.single .et_pb_post {
+  margin-bottom: 0;
+}
+
 /**                       
  *  ╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗
  *  ╠═╣║╣ ╠═╣ ║║║╣ ╠╦╝
@@ -89,6 +102,11 @@
 
   .et_header_style_left #et-top-navigation {
     transform: translateY(16%);
+  }
+
+  .et_mobile_menu {
+    left: -210% !important;
+    width: 300% !important;
   }
 }
 /**
@@ -157,7 +175,7 @@
  * -------------
  * **/
 .et_parallax_bg {
-  background-position: -700px 0;
+  background-position: right -150px;
 }
 
 /** 
@@ -170,9 +188,9 @@
 }
 
 /** 
- * ----------------------
- *   CUSTOM COLUMNS
- * ----------------------
+ * ---------------------------
+ *   CUSTOM COLUMN stacking
+ * ---------------------------
  * **/
 @media all and (max-width: 980px) {
   /*** wrap row in a flex box ***/
@@ -180,7 +198,25 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .x-custom-order-wrap .et_pb_blurb_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .x-custom-order-wrap .et_pb_blurb_content .et_pb_main_blurb_image {
+    order: 2;
+  }
+  .x-custom-order-wrap .et_pb_blurb_content .et_pb_blurb_container {
+    order: 1;
+  }
 
+  /* ^^^^^^^^^^^^^^^^^^
+  * * specific to blurbs
+  * *
+  * .
+  * .
+  * */
   /*** custom classes that will designate the order of columns in the flex box row ***/
   .x-first-col {
     order: 1;
@@ -201,6 +237,46 @@
   /*** add margin to last column ***/
   .x-custom-order-wrap:last-child .et_pb_column:last-child {
     margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .et_pb_blurb_content {
+    flex-direction: column;
+  }
+}
+/**                  
+ * ╔═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
+ * ╚═╗║╣ ║   ║ ║║ ║║║║╚═╗
+ * ╚═╝╚═╝╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ * **/
+.x-services .et_pb_column {
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(287deg, rgba(255, 255, 255, 0.99) 0%, rgba(0, 0, 0, 0.13) 100%);
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(229, 229, 229, 0.32) 49.16%, rgba(0, 0, 0, 0.13));
+}
+.x-services .et_pb_column h4 {
+  word-wrap: initial !important;
+}
+
+@media all and (max-width: 980px) {
+  .x-tabs .et_pb_row.et_pb_gutters3 {
+    padding: 2%;
+  }
+
+  .x-tabs .x-3-tabs .et_pb_column {
+    width: 47.25%;
+    margin-right: 5.5%;
+  }
+
+  .x-transformx.x-minus55pc {
+    transform: translateX(55%);
+  }
+}
+@media all and (max-width: 479px) {
+  .x-transformx.x-minus55pc {
+    transform: translateX(0);
   }
 }
 
