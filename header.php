@@ -247,8 +247,17 @@
 						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
 					</a>
 				</div>
+        <?php
+        /**
+				 * Custom code by inde[x] Web Media
+				 *
+				 * Adds the custom company name to the menu
+				 *
+				 * 
+				 */
+         ?>
         <div class="x-title-container">
-				  <h1 class="x-company-name title x-side-header">inde[x] Web Media</h1>
+				  <h1 class="x-company-name title x-side-header">index web media</h1>
         </div>
 			<?php
 				$logo_container = ob_get_clean();
@@ -263,7 +272,7 @@
 				echo et_core_intentionally_unescaped( apply_filters( 'et_html_logo_container', $logo_container ), 'html' );
 			?>
 				<div id="et-top-navigation" data-height="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>" data-fixed-height="<?php echo esc_attr( et_get_option( 'minimized_menu_height', '40' ) ); ?>">
-					<?php if ( ! $et_slide_header || is_customize_preview() ) : ?>
+          <?php if ( ! $et_slide_header || is_customize_preview() ) : ?>
 						<nav id="top-menu-nav">
 						<?php
 							$menuClass = 'nav';
@@ -281,14 +290,35 @@
 								<?php show_page_menu( $menuClass, false, false ); ?>
 								<?php show_categories_menu( $menuClass, false ); ?>
 							</ul>
+              
 						<?php
 							else :
 								echo et_core_esc_wp( $primaryNav );
 							endif;
 						?>
 						</nav>
+            
 					<?php endif; ?>
-
+          <?php
+            /**
+				     * Custom code by inde[x] Web Media
+				     *
+				     * Adds the Founder's picture with pop up description
+				     *
+				     * 
+				     */
+          ?>
+            <!-- <div class="tt toolt1" tip="1">
+              <div class="x-me">
+                <img src='https://indexwebmedia.com/wp-content/uploads/2020/04/portrait-2280_square.jpg' width='300' height='300'>
+              </div>
+            </div>
+            <div class="z999999 tooltip tooltip-1" style="display:none;">
+              <p>Hi There,<br>I hope I can be of service: if you've got any questions, whether is to clear a doubt, ask for more details or if you are a fellow professional and would like to connect, please use the form below at the bottom of the page. I'm always happy to be connect! <br>Also, there's no question small enough :)</p>
+              <h3>Lorenzo Colen</h3>
+              <h4>Founder @ inde[x] Web Media</h4>
+            </div> -->
+            <!-- END tooltip -->
 					<?php
 					if ( ! $et_top_info_defined && ( ! $et_slide_header || is_customize_preview() ) ) {
 						et_show_cart_total( array(
@@ -306,7 +336,7 @@
 						<span id="et_search_icon"></span>
 					</div>
 					<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
-
+          
 					<?php
 
 					/**

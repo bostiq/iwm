@@ -25,13 +25,33 @@ require_once('divi-children-engine/divi_children_engine.php');
 
 function my_login_logo() { ?>
     <style type="text/css">
+    font-face {
+  font-family: futura-light;
+  font-weight: 100;
+  src: url("./Fonts/futura-light-bt.ttf?#iefix") format("truetype"), url("./Fonts/futura-light-bt.ttf") format("truetype");
+}
+@font-face {
+  font-family: futura-medium;
+  font-weight: normal;
+  src: url("./Fonts/futura-medium.ttf?#iefix") format("truetype"), url("./Fonts/futura-medium.ttf") format("truetype");
+}
+        body::before {
+            background-image: url('../wp-content/uploads/2020/04/index_bg-2441-2.jpg') !important;
+        }
         #login h1 a, .login h1 a {
-            /* background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/cropped-Logo_170222_X_Thin_v3_512w.jpeg); */
-            background-image: url('../wp-content/uploads/2020/02/Logo_170222_X_Thin_v3_512w.jpeg');
+            background-image: url('../wp-content/uploads/2021/03/index-logo-blu-solo.svg');
 		        height:150px;
-		        width:150px;
-		        background-size: 150px 150px;
-		        background-repeat: no-repeat;
+		        width:auto;
+		        background-size: 150px auto;
+		        background-repeat: no-repeat;}
+
+        #login h1:after {
+            content: " ";
+            /* font-family: Georgia, 'Times New Roman', Times, serif ;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: none;
+            font-size: 40px;
+            line-height: 40px; */
        
         }
     </style>
@@ -54,11 +74,10 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // END LOGO
 
-// Attach CSS to wp-login.php
-
 function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/login-index.css' );
-    wp_enqueue_style( 'custom-fonts', get_stylesheet_directory_uri() . '/font-awesome-4.7.0/css/font-awesome.min.css' );
+    // wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/login-index.css' );
+    wp_enqueue_style( 'custom-fonts', 'https://indexwebmedia.com/bostiq/commons/font-awesome-4.7.0/css/font-awesome.min.css' );
+    wp_enqueue_style( 'custom-login-style', 'https://indexwebmedia.com/bostiq/commons/wp-login/login-index.min.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 

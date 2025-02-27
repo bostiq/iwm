@@ -1,0 +1,428 @@
+@charset "UTF-8";
+/*!
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * *MMMMMMM          ?MMMMMMMMMMMMMMMMMMMMMMMM          MMMMMMMM
+ * *MMMMMMM+  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  ~MMMMMMMM
+ * *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
+ * *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
+ * *MMMMMMMM  8MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM8  MMMMMMMMM
+ * *MMMMMMMM  7MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$  MMMMMMMMM
+ * *MMMMMMMM  +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+  MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMM         MMM        MMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMM     MMMMMMM   $MMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMM     MMMMMM  MMMMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMMM     MMMM 7MMMMMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMMMMN    D8 MMMMMMMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMM   MMMMMMMMM
+ * *MMMMMMMM   MMMMMMMMMMMMMMM  M    ~MMMMMMMMMMMMMM+  MMMMMMMMM
+ * *MMMMMMMM  +MMMMMMMMMMMMM  MMMM     MMMMMMMMMMMMM+  MMMMMMMMM
+ * *MMMMMMMM  7MMMMMMMMMMMM  MMMMMMZ    NMMMMMMMMMMM$  MMMMMMMMM
+ * *MMMMMMMM  8MMMMMMMMMM    MMMMMMM      MMMMMMMMMM8  MMMMMMMMM
+ * *MMMMMMMM  MMMMMMMMM        MMM          MMMMMMMMM  MMMMMMMMM
+ * *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
+ * *MMMMMMM7  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  +MMMMMMMM
+ * *MMMMMMM         +MMMMMMMMMMMMMMMMMMMMMMMMM+         MMMMMMMM
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ * */
+/* *Theme Name:  Inde[x] Web Media a Divi Child
+ * *Theme URI:   https://indexwebmedia.com
+ * *Version:     2.0
+ * *Description: A child theme of Divi. This is a custom child theme created for our site inde[x] Web Media.
+ * *Author:      Lorenzo Colen info@indexwebmedia.com
+ * *Author URI:  https://indexwebmedia.com
+ * *Template:    Divi
+ * */
+/* =====================
+ * - 
+ *    TEMPLATE RESETS
+ * -
+ * =====================
+ * */
+.single .post {
+  padding-bottom: 0;
+}
+.single .et_pb_post {
+  margin-bottom: 0;
+}
+
+/**                       
+ *  ╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗
+ *  ╠═╣║╣ ╠═╣ ║║║╣ ╠╦╝
+ *  ╩ ╩╚═╝╩ ╩═╩╝╚═╝╩╚═
+ * **/
+.logo_container {
+  width: 100% !important;
+}
+
+.x-company-name {
+  font-family: "Roboto Slab", Rockwell, serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  color: #404040;
+}
+
+/** 
+ * ----------------
+ * MENU ITEMS
+ * ----------------
+ * **/
+.nav li {
+  font-weight: 400;
+}
+
+@media all and (max-width: 980px) {
+  .container.clearfix.et_menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: last baseline;
+    justify-content: space-between;
+    width: 96%;
+    align-items: center;
+    align-self: auto;
+  }
+
+  .et_menu_container.clearfix::after {
+    content: none;
+  }
+
+  .x-company-name {
+    font-size: 5vw;
+  }
+
+  .et_vertical_nav.et_header_style_left .logo_container {
+    height: 80px;
+    position: relative;
+    width: 96px !important;
+    margin: 1% 1% 1% 0;
+  }
+
+  .et_header_style_left #et-top-navigation {
+    transform: translateY(16%);
+  }
+
+  .et-fixed-header #et-top-navigation {
+    transform: translateY(0%);
+  }
+
+  .et_mobile_menu {
+    left: -210% !important;
+    width: 300% !important;
+  }
+}
+@media all and (max-width: 420px) {
+  #top-header, #et-secondary-nav li ul {
+    background-color: #316EA4 !important;
+  }
+
+  #top-header {
+    color: #ffffff !important;
+  }
+  #top-header a {
+    color: #ffffff !important;
+  }
+
+  #et-secondary-nav li ul {
+    color: #ffffff !important;
+  }
+
+  #et-info {
+    margin-bottom: 2%;
+  }
+  #et-info * {
+    display: inline-block;
+  }
+  #et-info span {
+    padding-bottom: 4%;
+  }
+
+  .container.clearfix.et_menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 96%;
+    align-items: center;
+    align-self: auto;
+    margin: 0;
+  }
+  .container.clearfix.et_menu_container .logo_container {
+    width: 96px !important;
+  }
+  .container.clearfix.et_menu_container .logo_container a img#logo {
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .x-title-container h1 {
+    font-size: 7vw;
+  }
+
+  .et-fixed-header {
+    transition: all 200ms ease-in-out 0s;
+  }
+  .et-fixed-header #et-top-navigation {
+    background-color: rgba(49, 110, 164, 0.91) !important;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #4d4d4d;
+    width: 100%;
+    margin: 0;
+    padding: 0 5%;
+    transition: all 200ms ease-in-out 0s;
+  }
+
+  #et-top-navigation {
+    width: 96%;
+    margin: 0 2%;
+    position: fixed;
+    top: 0;
+  }
+  #et-top-navigation .mobile_menu_bar_toggle::before,
+#et-top-navigation #et_search_icon::before {
+    color: #E0FC83;
+  }
+  #et-top-navigation .et_mobile_menu {
+    top: 48px !important;
+    left: 0 !important;
+    width: 100% !important;
+    font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
+  }
+}
+/**
+ * ╔╗ ╔═╗╔═╗╦╔═╔═╗╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
+ * ╠╩╗╠═╣║  ╠╩╗║ ╦╠╦╝║ ║║ ║║║║ ║║  ║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
+ * ╚═╝╩ ╩╚═╝╩ ╩╚═╝╩╚═╚═╝╚═╝╝╚╝═╩╝  ╚═╝╚═╝╩ ╩╩  ╚═╝╝╚╝╚═╝╝╚╝ ╩ ╚═╝
+ * **/
+.x-cross::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTE2IDI2NzIuNyI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9Ijc3Ny45MjciIHkxPSIyOTY5LjQiIHgyPSI0MTcyLjI1NiIgeTI9Ii00MjQuOTI3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNDExNnYyNjcyLjdIMHoiLz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOTMxLjU4OSIgeTE9IjU2Mi45MTciIHgyPSI0MzI1LjkxNyIgeTI9IjM5NTcuMjQ1IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIG9wYWNpdHk9Ii44IiBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDQxMTZ2MjY3Mi43SDB6Ii8+PC9zdmc+");
+  background-position: top right;
+  background-size: cover;
+  opacity: 0.3;
+}
+.x-cross.x-flip::before {
+  transform: rotate(180deg);
+}
+.x-cross.x-opacity2::before {
+  opacity: 0.2;
+}
+.x-cross.x-opacity1::before {
+  opacity: 0.1;
+}
+
+/**
+ * ╔╗ ╦  ╦ ╦╦═╗╔╗   ╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╦╔╦╗╔═╗╔═╗╔═╗╔═╗
+ * ╠╩╗║  ║ ║╠╦╝╠╩╗  ╠╦╝║ ║║ ║║║║ ║║  ║║║║╠═╣║ ╦║╣ ╚═╗
+ * ╚═╝╩═╝╚═╝╩╚═╚═╝  ╩╚═╚═╝╚═╝╝╚╝═╩╝  ╩╩ ╩╩ ╩╚═╝╚═╝╚═╝
+ * **/
+.lorenzo .et_pb_image_wrap {
+  width: 40%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.lorenzo .et_pb_image_wrap img {
+  transform: scale(1.3);
+}
+
+/** 
+ * ╔═╗╔═╗╦═╗╔╦╗
+ * ╠╣ ║ ║╠╦╝║║║
+ * ╚  ╚═╝╩╚═╩ ╩
+ * -------------
+ * LOGIC COLUMNS
+ * -------------
+ * **/
+.et_pb_contact_form .et_pb_contact_field[data-type=checkbox] {
+  display: inline-block;
+  margin: 0 2% 2% 0;
+}
+
+/**                  
+ * ╔═╗╔═╗╔═╗╔═╗╔═╗
+ * ╠═╝╠═╣║ ╦║╣ ╚═╗
+ * ╩  ╩ ╩╚═╝╚═╝╚═╝
+ * **/
+/** 
+ * -------------
+ *   TITLES
+ * -------------
+ * **/
+@media all and (max-width: 980px) {
+  .x-titles h1, .x-titles h2 {
+    font-size: 9vw !important;
+  }
+}
+/** 
+ * -------------
+ *   HOME
+ * -------------
+ * **/
+.et_parallax_bg {
+  background-position: right -150px;
+}
+
+/** 
+ * -------------
+ *   ABOUT
+ * -------------
+ * **/
+.x-h4 h4 {
+  padding: 3vw 0 1vw;
+}
+
+/** 
+ * ---------------------------
+ *   CUSTOM COLUMN stacking
+ * ---------------------------
+ * **/
+@media all and (max-width: 980px) {
+  /*** wrap row in a flex box ***/
+  .x-custom-order-wrap .et_pb_row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .x-custom-order-wrap .et_pb_blurb_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .x-custom-order-wrap .et_pb_blurb_content .et_pb_main_blurb_image {
+    order: 2;
+  }
+  .x-custom-order-wrap .et_pb_blurb_content .et_pb_blurb_container {
+    order: 1;
+  }
+
+  /* ^^^^^^^^^^^^^^^^^^
+  * * specific to blurbs
+  * *
+  * .
+  * .
+  * */
+  /*** custom classes that will designate the order of columns in the flex box row ***/
+  .x-first-col {
+    order: 1;
+  }
+
+  .x-second-col {
+    order: 2;
+  }
+
+  .x-third-col {
+    order: 3;
+  }
+
+  .x-fourth-col {
+    order: 4;
+  }
+
+  /*** add margin to last column ***/
+  .x-custom-order-wrap:last-child .et_pb_column:last-child {
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .et_pb_blurb_content {
+    flex-direction: column;
+  }
+}
+/**                  
+ * ╔═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
+ * ╚═╗║╣ ║   ║ ║║ ║║║║╚═╗
+ * ╚═╝╚═╝╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ * **/
+.x-services .et_pb_column {
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(287deg, rgba(255, 255, 255, 0.99) 0%, rgba(0, 0, 0, 0.13) 100%);
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(229, 229, 229, 0.32) 49.16%, rgba(0, 0, 0, 0.13));
+}
+.x-services .et_pb_column h4 {
+  word-wrap: initial !important;
+}
+
+@media all and (max-width: 1280px) {
+  .x-services .et_pb_row {
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    background: linear-gradient(287deg, rgba(255, 255, 255, 0.99) 0%, rgba(0, 0, 0, 0.13) 100%);
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(229, 229, 229, 0.32) 49.16%, rgba(0, 0, 0, 0.13));
+    width: 92%;
+    margin-bottom: 6%;
+  }
+  .x-services .et_pb_column {
+    border-radius: 0px;
+    box-shadow: 0 0 rgba(255, 255, 255, 0);
+    background: transparent;
+    background-image: none;
+  }
+  .x-services .et_pb_gutters3.et_pb_row .et_pb_column {
+    margin-right: 2%;
+    width: calc((100% - 4%) / 3);
+  }
+}
+@media all and (max-width: 980px) {
+  .x-services .et_pb_row .et_pb_column {
+    margin-right: 4%;
+    width: calc( (100% - 8%) / 3);
+  }
+  .x-services .et_pb_row .et_pb_column.et-last-child {
+    margin-right: 0;
+  }
+  .x-services .et_pb_row .et_pb_column:first-child .et_pb_module.et_pb_blurb {
+    padding-left: 12%;
+  }
+  .x-services .et_pb_row .et_pb_column:last-child .et_pb_module.et_pb_blurb {
+    padding-right: 12%;
+  }
+  .x-services .et_pb_row .et_pb_column .et_pb_blurb {
+    padding: 0%;
+  }
+}
+@media all and (max-width: 980px) {
+  .x-tabs .et_pb_row.et_pb_gutters3 {
+    padding: 2%;
+  }
+
+  .x-tabs .x-3-tabs .et_pb_column {
+    width: 47.25%;
+    margin-right: 5.5%;
+  }
+
+  .x-transformx.x-minus55pc {
+    transform: translateX(55%);
+  }
+}
+@media all and (max-width: 479px) {
+  .x-transformx.x-minus55pc {
+    transform: translateX(0);
+  }
+}
+/**
+ *  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
+ *  ║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
+ *  ╚═╝╚═╝╩ ╩╩  ╚═╝╝╚╝╚═╝╝╚╝ ╩ ╚═╝
+ * **/
+.x-services .et_pb_column .et_pb_main_blurb_image span {
+  transition: color 200ms ease-in-out 0s;
+}
+
+.x-services .et_pb_column:hover .et_pb_main_blurb_image span {
+  color: #D60031 !important;
+  transition: color 200ms ease-in-out 0s;
+}
+
+/*# sourceMappingURL=style.exp.css.map */
