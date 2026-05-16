@@ -21,12 +21,12 @@
 @use 'index' as *
 @use 'sass:color'
 
-/* =====================
- - 
- TEMPLATE RESETS
- -
- =====================
- */
+/* ________________________________________
+/* |                                      |
+/*!| -==       TEMPLATE RESETS        ==- |
+/* |                                      |
+/* |======================================|
+/**
 
 .single
   .post
@@ -35,14 +35,32 @@
   .et_pb_post
     margin-bottom: 0
 
-/* =====================
- - 
- COMMON COMPONENTS
- -
- =====================
- */
+/* ________________________________________
+/* |                                      |
+/*!| -==       COMMON COMPONENTS      ==- |
+/* |                                      |
+/* |======================================|
+/**
 
-/* BLOCKQUOTES */
+#et-main-area h1.entry-title
+  &:before,
+  &::after  
+    display: inline-block
+    position: relative
+    font-size: 120%
+  
+  &:before
+    content: '['
+    margin-right: 10px 
+
+
+  &::after 
+    content: ']'
+    margin-left: 10px
+
+
+
+/* BLOCKQUOTES 
 blockquote
   &::before,
   &::after
@@ -64,7 +82,7 @@ blockquote
     margin-left: 0
     margin-top: -40px
 
-/* FLEX ELEMENTS */
+/* FLEX ELEMENTS
 
 .x-flex
   display: flex
@@ -105,7 +123,7 @@ blockquote
     right: 0
     bottom: 0
     left: 0
-    background: change-color($black, $alpha: .3)
+    background: color.adjust($black, $alpha: -.7)
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTE2IDI2NzIuNyI+PGxpbmVhckdyYWRpZW50IGlkPSJhIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9Ijc3Ny45MjciIHkxPSIyOTY5LjQiIHgyPSI0MTcyLjI1NiIgeTI9Ii00MjQuOTI3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNDExNnYyNjcyLjdIMHoiLz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOTMxLjU4OSIgeTE9IjU2Mi45MTciIHgyPSI0MzI1LjkxNyIgeTI9IjM5NTcuMjQ1IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMzAyNS42NTYpIj48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM3YzdjN2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii41MTUiIHN0b3AtY29sb3I9IiM5OTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiM3MTcxNzEiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii42MjIiIHN0b3AtY29sb3I9IiNjY2MiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9Ii44NDkiIHN0b3AtY29sb3I9IiNjZGNkY2QiIHN0b3Atb3BhY2l0eT0iLjUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iLjUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIG9wYWNpdHk9Ii44IiBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDQxMTZ2MjY3Mi43SDB6Ii8+PC9zdmc+')
     background-position: 20% 42%
     background-size: cover
@@ -166,40 +184,45 @@ blockquote
  ╩  ╩ ╩╚═╝╚═╝╚═╝
  **/
 
-/** 
- -------------
- TITLES
- -------------
- **/
+/* ________________________________________
+/* |                                      |
+/*!| -==           TITLES             ==- |
+/* |                                      |
+/* |======================================|
+/**
+
 @media all and (max-width: 980px)
   .x-titles
     h1, h2
       font-size: 9vw !important
 
-/** 
- -------------
- HOME
- -------------
- **/
+/* ________________________________________
+/* |                                      |
+/*!| -==            HOME              ==- |
+/* |                                      |
+/* |======================================|
+/**
 
 .et_parallax_bg
   background-position: right -150px
 
-/** 
- -------------
- ABOUT
- -------------
- **/
+/* ________________________________________
+/* |                                      |
+/*!| -==           ABOUT              ==- |
+/* |                                      |
+/* |======================================|
+/**
 
 .x-h4
   h4
     padding: 3vw 0 1vw
 
-/** 
- ---------------------------
- CUSTOM COLUMN stacking
- ---------------------------
- **/
+/* ________________________________________
+/* |                                      |
+/*!| -==   CUSTOM COLUMN stacking     ==- |
+/* |                                      |
+/* |======================================|
+/**
 
 @media all and (max-width: 980px)
 
@@ -260,45 +283,47 @@ blockquote
 .et_pb_blog_0.x-neo-grey article.et_pb_post
   border-radius: 20px
   padding: 40px
-  box-shadow: 0 0 24px change-color($black, $lightness: 20%) inset
-  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.99), change-color($black, $lightness: 46.3%, $alpha: .5) 49.16%, change-color($black, $lightness: 29%, $alpha: .5))
-  background: linear-gradient(315deg, change-color($black, $lightness: 46.3%, $alpha: .5) 0%, change-color($black, $lightness: 29%, $alpha: .5) 100%)
+  box-shadow: 0 0 24px color.adjust($black, $lightness: 20%) inset
+  // background-image: -webkit-linear-gradient(135deg, color.adjust($white, $alpha: -0.01), change-color($black, $lightness: 46.3%, $alpha: .5) 49.16%, change-color($black, $lightness: 29%, $alpha: .5))
+  background-image: -webkit-linear-gradient(135deg, color.adjust($white, $alpha: -0.01), color.adjust($black, $lightness: 46.3%, $alpha: -.5) 49.16%, color.adjust($black, $lightness: 29%, $alpha: -.5))
+  background: linear-gradient(315deg, color.adjust($black, $lightness: 46.3%, $alpha: -.5) 0%, color.adjust($black, $lightness: 29%, $alpha: -.5) 100%)
 
 .et_pb_blog_0.x-neo
   article.et_pb_post
     border-radius: 20px
     padding: 40px
-    box-shadow: 10px 10px 24px 0 change-color($black, $lightness: 35%, $alpha: .22), -16px -16px 32px 0 $white
-    background-image: -webkit-linear-gradient(135deg, change-color($white, $alpha: .99), change-color($black, $lightness: 90%, $alpha: .32) 49.16%, change-color($black, $alpha: .13))
-    background: linear-gradient(315deg, change-color($white, $alpha: .99) 0%, change-color($black, $alpha: .13) 100%)
+    box-shadow: 10px 10px 24px 0 color.adjust($black, $lightness: 35%, $alpha: -.78), -16px -16px 32px 0 $white
+    background-image: -webkit-linear-gradient(135deg, color.adjust($white, $alpha: -.01), color.adjust($black, $lightness: 90%, $alpha: -.68) 49.16%, color.adjust($black, $alpha: -.87))
+    background: linear-gradient(315deg, color.adjust($white, $alpha: -.01) 0%, color.adjust($black, $alpha: -.87) 100%)
 
 /*  SERVICES  */
 .x-services
   .et_pb_column
     border-radius: 40px
     overflow: hidden
-    box-shadow: 12px 12px 24px 0 change-color($black, $alpha: .2), -12px -12px 24px 0 change-color($white, $alpha: .5)
-    background-image: -webkit-linear-gradient(135deg, change-color($white, $alpha: .99), change-color($black, $lightness: 90%, $alpha: .32) 49.16%, change-color($black, $alpha: .13))
-    background: linear-gradient(315deg, change-color($white, $alpha: .99) 0%, change-color($black, $alpha: .13) 100%)
+    box-shadow: 12px 12px 24px 0 color.adjust($black, $alpha: -.8), -12px -12px 24px 0 color.adjust($white, $alpha: -.5)
+    background-image: -webkit-linear-gradient(135deg, color.adjust($white, $alpha: -.01), color.adjust($black, $lightness: 90%, $alpha: -.68) 49.16%, color.adjust($black, $alpha: -.87))
+    background: linear-gradient(315deg, color.adjust($white, $alpha: -.01) 0%, color.adjust($black, $alpha: -.87) 100%)
 
     &.x-neo-reset
       border-radius: 0
       box-shadow: none
       background-image: none
-      background: change-color($white, $alpha: 0)
+      background: color.adjust($white, $alpha: -1)
 
   h4
     word-wrap: initial !important
+
 
 @media all and (max-width: 1280px)
   .x-services
     .et_pb_row
       border-radius: 40px
       overflow: hidden
-      box-shadow: 12px 12px 24px 0 change-color($black, $alpha: .2), -12px -12px 24px 0 change-color($white, $alpha: .5)
-      background: linear-gradient(287deg, change-color($white, $alpha: .99) 0%, change-color($black, $alpha: .13) 100%)
+      box-shadow: 12px 12px 24px 0 color.adjust($black, $alpha: -.8), -12px -12px 24px 0 color.adjust($white, $alpha: -.5)
+      background: linear-gradient(287deg, color.adjust($white, $alpha: -.01) 0%, color.adjust($black, $alpha: -.87) 100%)
       /*!* HERE */
-      background-image: -webkit-linear-gradient(135deg, change-color($white, $alpha: .99), change-color($black, $lightness: 90%, $alpha: .32) 49.16%, change-color($black, $alpha: .13))
+      background-image: -webkit-linear-gradient(135deg, color.adjust($white, $alpha: -.01), color.adjust($black, $lightness: 90%, $alpha: -.68) 49.16%, color.adjust($black, $alpha: -.87))
       width: 92%
       margin-bottom: 6%
 
@@ -306,11 +331,11 @@ blockquote
         border-radius: 0
         box-shadow: none
         background-image: none
-        background: change-color($white, $alpha: 0)
+        background: color.adjust($white, $alpha: -1)
 
     .et_pb_column
       border-radius: 0
-      box-shadow: 0 0 change-color($white, $alpha: 0)
+      box-shadow: 0 0 color.adjust($white, $alpha: -1)
       background: transparent
       background-image: none
 
@@ -378,126 +403,3 @@ blockquote
       span
         color: $red !important
         transition: $col-200ms
-
-/*================
- .
- TOOLTIPS !!
- .
- ===============
-
-.z999999
-  z-index: 999999 !important
-  position: relative
-
-.et_pb_code sup,
-.et_pb_text sup
-  font-size: 80%
-
-.tt
-  // border-bottom: 2px dotted $l-blue
-  position: relative
-  z-index: 9999
-
-.toolt
-  /* flex-direction: column */
-
-  position: fixed
-  background-color: $l-sky
-  width: 50vw
-  padding: 2%
-  font-size: 16px
-  transform: scale(0, 0)
-  transform-origin: top right
-  transition: all 200ms ease-in-out 0s
-  z-index: 9999
-  border: 4px solid $l-blue
-  border-radius: 10px
-  right: 5% !important
-  top: 17.5% !important
-  line-height: 1.2em
-
-  br
-    line-height: 2em
-    margin-bottom: 10px
-
-  a
-    border-bottom: 2px dotted $l-teal
-
-.tt:hover .toolt
-  position: fixed
-  transform: scale(1, 1) !important
-
-@media screen and (max-width: 480px)
-  .toolt
-    position: fixed
-    width: 80vw
-    right: 10vw
-    top: 10vw
-
-/* .toolt
- a
- border-bottom: 2px dotted $l-teal
-
-/* background-color: $ice
- line-height: 1.4em
- i
- display: inline-block
-
-.ita
-  font-style: italic
-  clear: both
-  position: relative
-  display: inline-block
-
-  /* float: right
-
-/* =================
- jBOX TOOLTIPS
- =================
- */
-.jBox-container
-  background-color: $d-ice
-  border-radius: 10px !important
-
-.jBox-content
-  background-color: $d-ice
-  border-radius: 10px !important
-  border: 5px solid $l-blue
-
-/* .jBox-container:before , .jBox-content:before {
- border-color: $m-teal
- background: $m-teal
- }
- */
-
-.jBox-pointer::after
-  background: $l-blue !important
-
-/* .jBox-closeButton-box .jBox-closeButton {
- background: $d-ice !important
- }
- */
-.jBox-closeButton path
-  fill: $d-grey !important
-
-.jBox-content p
-  margin-left: 20px
-
-  i
-    margin-left: -20px
-
-/* =================
- TOOLTIP 1
- =================
- */
-
-.tooltip-1
-  h3, h4
-    color: change-color($black, $lightness: 20%)
-    font-size: 18px
-
-  h4
-    font-style: italic
-
-/*   END TOOLTIPS
-/* =======================

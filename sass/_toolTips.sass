@@ -1,0 +1,125 @@
+@use "sass:color"
+@use "colors" as *
+
+/*================
+ .
+ TOOLTIPS !!
+ .
+ ===============
+
+.z999999
+  z-index: 999999 !important
+  position: relative
+
+.et_pb_code sup,
+.et_pb_text sup
+  font-size: 80%
+
+.tt
+  // border-bottom: 2px dotted $l-blue
+  position: relative
+  z-index: 9999
+
+.toolt
+  /* flex-direction: column */
+
+  position: fixed
+  background-color: $l-sky
+  width: 50vw
+  padding: 2%
+  font-size: 16px
+  transform: scale(0, 0)
+  transform-origin: top right
+  transition: all 200ms ease-in-out 0s
+  z-index: 9999
+  border: 4px solid $l-blue
+  border-radius: 10px
+  right: 5% !important
+  top: 17.5% !important
+  line-height: 1.2em
+
+  br
+    line-height: 2em
+    margin-bottom: 10px
+
+  a
+    border-bottom: 2px dotted $l-teal
+
+.tt:hover .toolt
+  position: fixed
+  transform: scale(1, 1) !important
+
+@media screen and (max-width: 480px)
+  .toolt
+    position: fixed
+    width: 80vw
+    right: 10vw
+    top: 10vw
+
+/* .toolt
+ a
+ border-bottom: 2px dotted $l-teal
+
+/* background-color: $ice
+ line-height: 1.4em
+ i
+ display: inline-block
+
+.ita
+  font-style: italic
+  clear: both
+  position: relative
+  display: inline-block
+
+  /* float: right
+
+/* =================
+ jBOX TOOLTIPS
+ =================
+ */
+.jBox-container
+  background-color: $d-ice
+  border-radius: 10px !important
+
+.jBox-content
+  background-color: $d-ice
+  border-radius: 10px !important
+  border: 5px solid $l-blue
+
+/* .jBox-container:before , .jBox-content:before 
+ border-color: $m-teal
+ background: $m-teal
+ 
+ */
+
+.jBox-pointer::after
+  background: $l-blue !important
+
+/* .jBox-closeButton-box .jBox-closeButton 
+ background: $d-ice !important
+ 
+ */
+.jBox-closeButton path
+  fill: $d-grey !important
+
+.jBox-content p
+  margin-left: 20px
+
+  i
+    margin-left: -20px
+
+/* =================
+ TOOLTIP 1
+ =================
+ */
+
+.tooltip-1
+  h3, h4
+    color: color.adjust($black, $lightness: 20%)
+    font-size: 18px
+
+  h4
+    font-style: italic
+
+/*   END TOOLTIPS
+/* =======================

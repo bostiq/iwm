@@ -1,0 +1,35 @@
+@use 'sass:color'
+@use 'colors' as *
+
+/* ________________________________________
+/* |                                      |
+/*!| -==            FORMS             ==- |
+/* |                                      |
+/* |______________________________________|
+/**
+
+/*! ===   FORMS BUTTONS   ===>
+@mixin button-shadow
+  box-shadow: 12px 12px 24px 0 color.adjust($black, $alpha: -0.8), -12px -12px 24px 0 color.adjust($white, $alpha: -0.7)
+
+.et_pb_button
+  @include button-shadow
+
+.et_pb_contact_form_0.et_pb_contact_form_container.et_pb_contact_form_container
+  .et_contact_bottom_container
+    .et_pb_contact_submit.et_pb_button
+      @include button-shadow
+
+@mixin button-shadow-active
+  box-shadow: inset 6px 6px 8px 0 color.adjust($black, $alpha: -0.8), inset -6px -6px 8px 0 color.adjust($white, $alpha: -0.9), 6px 6px 8px 0 color.adjust($black, $alpha: -0.9), -6px -6px 8px 0 color.adjust($white, $alpha: -0.8)
+
+.et_pb_button
+  &:active
+    @include button-shadow-active
+
+    
+.et_pb_contact_form_0.et_pb_contact_form_container.et_pb_contact_form_container
+  .et_contact_bottom_container
+    .et_pb_contact_submit.et_pb_button
+      &:active 
+        @include button-shadow-active
