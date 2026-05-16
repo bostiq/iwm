@@ -1,0 +1,237 @@
+@use 'colors' as *
+@use 'sass:color'
+
+/**                       
+ ╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗
+ ╠═╣║╣ ╠═╣ ║║║╣ ╠╦╝
+ ╩ ╩╚═╝╩ ╩═╩╝╚═╝╩╚═
+ **/
+
+.logo_container
+  width: 100% !important
+
+.x-company-name
+  font-family: futura-medium, helvetica, arial, sans-serif
+  // font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif
+  font-weight: 500
+  font-size: 2.6rem
+  color: $font-dark
+  // text-align: center
+  // text-transform: uppercase
+  // text-shadow: 0 3px 0 #aaa
+
+.x-me
+  border-radius: 50%
+  overflow: hidden
+
+  img
+    transform: scale(1.2)
+    transition: transform 300ms ease-in-out 0s
+
+    &:hover
+      transform: scale(1.4)
+      transition: transform 300ms ease-in-out 0s
+
+/* ________________________________________
+/* |                                      |
+/*!| -==         MENU ITEMS           ==- |
+/* |                                      |
+/* |______________________________________|
+/**
+
+
+.nav
+  li
+    font-weight: 400
+
+/* ________________________________________
+/* |                                      |
+/*!| -==         MENU LOGO           ==- |
+/* |                                      |
+/* |______________________________________|
+/**
+
+@media all and (max-width:980px) 
+ 
+  .et_vertical_nav #main-header span.logo_helper 
+    display: none
+
+  #main-header
+    .logo_container 
+      width: 15%
+
+  .et_vertical_nav.et_header_style_left
+    #main-header
+      .logo_container 
+        position: unset
+        height: auto
+  
+  .et_header_style_left
+    #main-header
+      .logo_container #logo
+        width: 100px
+        /*     height: 100px */
+        max-width: 100%
+        max-height: 90%
+    
+        padding: 0
+        margin: 0
+        width: 100%
+        max-width: 100px
+
+/* ________________________________________
+/* |                                      |
+/*!| -==        MOBILE MENU           ==- |
+/* |                                      |
+/* |______________________________________|
+/**
+
+@media all and ( max-width: 980px )
+  #main-header
+    .container.clearfix.et_menu_container
+      display: flex
+      flex-wrap: nowrap
+      justify-content: space-between
+      width: 96%
+      align-items: center
+
+  .et_menu_container.clearfix
+    &::after
+      content: none
+
+  .x-company-name
+    font-size: 5vw
+
+  .et_vertical_nav.et_header_style_left .logo_container
+    height: 80px
+    position: relative
+    width: 96px !important
+    margin: 1% 1% 1% 0
+
+  .et_header_style_left #et-top-navigation
+    transform: translateY(16%)
+
+  .et-fixed-header #et-top-navigation
+    transform: translateY(0%)
+
+  .et_mobile_menu
+    left: -202% !important
+    width: 300% !important
+
+@media all and (max-width:980px) 
+  #main-header
+    .container.clearfix.et_menu_container
+      .logo_container,
+      .x-title-container,
+      #et-top-navigation
+  
+        flex: 1 1 32%
+  
+      #et-top-navigation #et_mobile_nav_menu .mobile_menu_bar 
+        /*! padding: 0 */   
+        margin-top: 0
+
+      .x-title-container
+        display: flex
+        justify-content: center
+
+@media all and (max-width: 420px)
+  .page.et_secondary_nav_enabled #page-container #top-header,
+  #et-secondary-nav li ul,
+  #top-header
+    background-color: $ateal !important
+    position: relative
+    z-index: 9 !important
+
+  #top-header
+    color: $white !important
+
+    a
+      color: $white !important
+
+  #et-secondary-nav li ul
+    color: $white !important
+
+  #et-info
+    margin-bottom: 2%
+
+    *
+      display: inline-block
+
+    span
+      padding-bottom: 4%
+
+  .container.clearfix.et_menu_container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 96%
+    align-items: center
+    align-self: auto
+    margin: 0
+
+    .logo_container
+      width: 96px !important
+      margin: 0 auto
+
+      a img#logo
+        max-width: 100%
+        height: 100%
+        max-height: 100%
+
+  .x-title-container h1
+    font-size: 7vw
+
+  .et-fixed-header
+    transition: $all-200ms
+
+    #et-top-navigation
+      background-color: rgba(49,110,164,.91) !important
+      box-shadow: 0 0 20px rgba(0,0,0,.3)
+      border-bottom: 1px solid #4d4d4d
+      width: 100%
+      margin: 0 auto
+      padding: 2% 7% !important
+      transition: all 200ms ease-in-out 0s
+      left: 0
+
+  #et-top-navigation
+    width: 96%
+    margin: 0 2%
+    position: fixed
+    top: 0
+    left: 0
+
+    .mobile_menu_bar_toggle::before,
+    #et_search_icon::before
+      color: $lime
+
+    .et_mobile_menu
+      top: 48px !important
+      left: 0 !important
+      width: 100% !important
+      font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif !important
+
+  #main-header
+    // z-index: 1 !important
+    &.et-fixed-header
+      z-index: 9999
+
+@media screen and (max-width: 420px) 
+  #et-top-navigation:has(#et_mobile_nav_menu)  
+    width: 100% !important
+    padding: 0 2%
+    right: 0
+    z-index: 99999 !important
+    margin: 0
+
+@media all and (max-width:420px)  
+  #et-top-navigation
+      #et_mobile_nav_menu
+        .mobile_menu_bar 
+          /*! padding: 0 */   
+          margin-top: 0
+  
+
+ 
+  

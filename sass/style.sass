@@ -5,36 +5,7 @@
 // sass-lint:disable no-ids
 // sass-lint:disable force-element-nesting
 // sass-lint:disable force-pseudo-nesting
-/*
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- *MMMMMMM          ?MMMMMMMMMMMMMMMMMMMMMMMM          MMMMMMMM
- *MMMMMMM+  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  ~MMMMMMMM
- *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
- *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
- *MMMMMMMM  8MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM8  MMMMMMMMM
- *MMMMMMMM  7MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$  MMMMMMMMM
- *MMMMMMMM  +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+  MMMMMMMMM
- *MMMMMMMM   MMMMMMMM         MMM        MMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMM     MMMMMMM   $MMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMM     MMMMMM  MMMMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMMM     MMMM 7MMMMMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMMMMN    D8 MMMMMMMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMM   MMMMMMMMM
- *MMMMMMMM   MMMMMMMMMMMMMMM  M    ~MMMMMMMMMMMMMM+  MMMMMMMMM
- *MMMMMMMM  +MMMMMMMMMMMMM  MMMM     MMMMMMMMMMMMM+  MMMMMMMMM
- *MMMMMMMM  7MMMMMMMMMMMM  MMMMMMZ    NMMMMMMMMMMM$  MMMMMMMMM
- *MMMMMMMM  8MMMMMMMMMM    MMMMMMM      MMMMMMMMMM8  MMMMMMMMM
- *MMMMMMMM  MMMMMMMMM        MMM          MMMMMMMMM  MMMMMMMMM
- *MMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  MMMMMMMMM
- *MMMMMMM7  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  +MMMMMMMM
- *MMMMMMM         +MMMMMMMMMMMMMMMMMMMMMMMMM+         MMMMMMMM
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- *MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
- */
+
 
 /*!
  *Theme Name:  Inde[x] Web Media a Divi Child
@@ -47,11 +18,9 @@
  */
 
 // @use 'colors'
-@import 'colors'
-@import 'fonts'
+@use 'index' as *
+@use 'sass:color'
 
-$all-200ms: all 200ms ease-in-out 0s
-$col-200ms: color 200ms ease-in-out 0s
 /* =====================
  - 
  TEMPLATE RESETS
@@ -121,149 +90,6 @@ blockquote
   content: '\f0e1' !important
   font-family: 'Fontawesome' !important
 
-/**                       
- ╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗
- ╠═╣║╣ ╠═╣ ║║║╣ ╠╦╝
- ╩ ╩╚═╝╩ ╩═╩╝╚═╝╩╚═
- **/
-
-.logo_container
-  width: 100% !important
-
-.x-company-name
-  font-family: futura-medium, helvetica, arial, sans-serif
-  // font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif
-  font-weight: 500
-  font-size: 2.6rem
-  color: $font-dark
-  // text-align: center
-  // text-transform: uppercase
-  // text-shadow: 0 3px 0 #aaa
-
-.x-me
-  border-radius: 50%
-  overflow: hidden
-
-  img
-    transform: scale(1.2)
-    transition: transform 300ms ease-in-out 0s
-
-    &:hover
-      transform: scale(1.4)
-      transition: transform 300ms ease-in-out 0s
-
-/** 
- ----------------
- MENU ITEMS
- ----------------
- **/
-
-.nav
-  li
-    font-weight: 400
-
-@media all and ( max-width: 980px )
-  .container.clearfix.et_menu_container
-    display: flex
-    flex-wrap: wrap
-    align-content: last baseline
-    justify-content: space-between
-    width: 96%
-    align-items: center
-    align-self: auto
-
-  .et_menu_container.clearfix
-    &::after
-      content: none
-
-  .x-company-name
-    font-size: 5vw
-
-  .et_vertical_nav.et_header_style_left .logo_container
-    height: 80px
-    position: relative
-    width: 96px !important
-    margin: 1% 1% 1% 0
-
-  .et_header_style_left #et-top-navigation
-    transform: translateY(16%)
-
-  .et-fixed-header #et-top-navigation
-    transform: translateY(0%)
-
-  .et_mobile_menu
-    left: -210% !important
-    width: 300% !important
-
-@media all and (max-width: 420px)
-  .page.et_secondary_nav_enabled #page-container #top-header,#top-header, #et-secondary-nav li ul
-    background-color: $ateal !important
-
-  #top-header
-    color: $white !important
-
-    a
-      color: $white !important
-
-  #et-secondary-nav li ul
-    color: $white !important
-
-  #et-info
-    margin-bottom: 2%
-
-    *
-      display: inline-block
-
-    span
-      padding-bottom: 4%
-
-  .container.clearfix.et_menu_container
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    width: 96%
-    align-items: center
-    align-self: auto
-    margin: 0
-
-    .logo_container
-      width: 96px !important
-
-      a img#logo
-        max-width: 100%
-        height: 100%
-        max-height: 100%
-
-  .x-title-container h1
-    font-size: 7vw
-
-  .et-fixed-header
-    transition: $all-200ms
-
-    #et-top-navigation
-      background-color: change-color($ateal, $alpha: .91) !important
-      box-shadow: 0 0 20px 0 transparentize($black, .7)
-      border-bottom: 1px solid lighten($black, 30%)
-      width: 100%
-      margin: 0
-      padding: 0 5%
-      transition: $all-200ms
-
-  #et-top-navigation
-    width: 96%
-    margin: 0 2%
-    position: fixed
-    top: 0
-
-    .mobile_menu_bar_toggle::before,
-    #et_search_icon::before
-      color: $lime
-
-    .et_mobile_menu
-      top: 48px !important
-      left: 0 !important
-      width: 100% !important
-      font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif !important
 
 /**
  ╔╗ ╔═╗╔═╗╦╔═╔═╗╦═╗╔═╗╦ ╦╔╗╔╔╦╗  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
@@ -573,7 +399,7 @@ blockquote
   z-index: 9999
 
 .toolt
-  /* flex-direction: column; */
+  /* flex-direction: column */
 
   position: fixed
   background-color: $l-sky
@@ -612,7 +438,7 @@ blockquote
  a
  border-bottom: 2px dotted $l-teal
 
-/* background-color: $ice;
+/* background-color: $ice
  line-height: 1.4em
  i
  display: inline-block
@@ -623,7 +449,7 @@ blockquote
   position: relative
   display: inline-block
 
-  /* float: right;
+  /* float: right
 
 /* =================
  jBOX TOOLTIPS
@@ -639,8 +465,8 @@ blockquote
   border: 5px solid $l-blue
 
 /* .jBox-container:before , .jBox-content:before {
- border-color: $m-teal;
- background: $m-teal;
+ border-color: $m-teal
+ background: $m-teal
  }
  */
 
@@ -648,7 +474,7 @@ blockquote
   background: $l-blue !important
 
 /* .jBox-closeButton-box .jBox-closeButton {
- background: $d-ice !important;
+ background: $d-ice !important
  }
  */
 .jBox-closeButton path

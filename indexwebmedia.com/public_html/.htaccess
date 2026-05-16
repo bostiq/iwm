@@ -1,0 +1,19 @@
+SetEnv PHPRC /home/customer/www/indexwebmedia.com/public_html/php.ini
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^indexwebmedia.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.indexwebmedia.com$
+RewriteCond %{REQUEST_URI} !indexwebmedia.com/
+RewriteRule (.*) /indexwebmedia.com/$1 [L]
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /
+#RewriteRule ^index\.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.php [L]
+#</IfModule>
+# END WordPress
+
+# Lorenzo custom
+AddHandler application/x-httpd-php83 .php .php5 .php4 .php3
