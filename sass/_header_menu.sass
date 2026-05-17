@@ -33,10 +33,10 @@
       transition: transform 300ms ease-in-out 0s
 
 .et_vertical_nav
-  #main-header
+  header#main-header
     .container
       width: auto
-      margin: 0 25px
+      margin: 0 12%
 
 
 /* ________________________________________
@@ -107,7 +107,7 @@
       content: none
 
   .x-company-name
-    font-size: 5vw
+    font-size: clamp(1.875rem, 1.533rem + 1.522vi, 2.75rem)
 
   .et_vertical_nav.et_header_style_left .logo_container
     height: 80px
@@ -130,8 +130,7 @@
     .container.clearfix.et_menu_container
       .logo_container,
       .x-title-container,
-      #et-top-navigation
-  
+      #et-top-navigation 
         flex: 1 1 32%
   
       #et-top-navigation #et_mobile_nav_menu .mobile_menu_bar 
@@ -142,7 +141,14 @@
         display: flex
         justify-content: center
 
+  .et_vertical_nav
+    header#main-header
+      .container
+        width: auto
+        margin: 0 2%
+
 @media all and (max-width: 420px)
+
   .page.et_secondary_nav_enabled #page-container #top-header,
   #et-secondary-nav li ul,
   #top-header
@@ -186,9 +192,6 @@
         height: 100%
         max-height: 100%
 
-  .x-title-container h1
-    font-size: 7vw
-
   .et-fixed-header
     transition: $all-200ms
 
@@ -223,6 +226,16 @@
     // z-index: 1 !important
     &.et-fixed-header
       z-index: 9999
+
+    .container.clearfix.et_menu_container
+
+      .logo_container
+        display: flex
+        justify-content: flex-end
+
+      .x-title-container
+        display: flex
+        justify-content: flex-start
 
 @media screen and (max-width: 420px) 
   #et-top-navigation:has(#et_mobile_nav_menu)  
